@@ -1,0 +1,9 @@
+spring:
+  r2dbc:
+    username: root
+    password: Omaremad2!
+    url: r2dbc:mysql://localhost:3306/reactive_spring
+#  flyway:
+#    user: root
+#    password: Omaremad2!
+#    url: jdbc:mysql://localhost:3306/reactive_spring
