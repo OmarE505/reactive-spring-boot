@@ -6,6 +6,8 @@ import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
+import java.time.Duration;
+
 @RestController
 @RequestMapping("/api/v1/")
 public class PersonController {
@@ -18,7 +20,7 @@ public class PersonController {
 
     @GetMapping("/persons")
     public Flux<Person> getAll() {
-        return personService.findAll();
+        return personService.findAll().delayElements(Duration.ofSeconds(1));
     }
 
     @PostMapping("/persons")
